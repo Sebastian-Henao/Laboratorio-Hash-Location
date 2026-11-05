@@ -1,0 +1,33 @@
+<div class="table-container">
+	<table class="table table-striped border">
+		<thead>
+			<tr>
+				<th scope="col">Id</th>
+				<th scope="col">Nombre</th>
+				<th scope="col">Título</th>
+				<th scope="col">Región</th>
+				<th scope="col">Dificultad</th>
+				<th scope="col">Descripción</th>
+				<th scope="col">Rol</th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (personaje of moduleLol; track personaje.id) {
+				<tr>
+					<th scope="row">{{ personaje.id }}</th>
+					<td>{{ personaje.nombre }}</td>
+					<td>{{ personaje.titulo }}</td>
+					<td>{{ personaje.region }}</td>
+					<td>{{ personaje.dificultad }}</td>
+					<td>{{ personaje.descripcion }}</td>
+					<td>
+						<app-badge
+							[text]="personaje.rol"
+							[type]="categoryMap[personaje.rol]">
+						</app-badge>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
