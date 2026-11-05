@@ -1,0 +1,43 @@
+<section class="catalog" aria-label="Catálogo de videojuegos">
+  <div class="table-scroll">
+    <table class="games-table">
+      <caption class="visually-hidden">Videojuegos disponibles en el catálogo</caption>
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Videojuego</th>
+          <th scope="col">Género</th>
+          <th scope="col">Plataforma</th>
+          <th scope="col">Año</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (juego of juegos; track juego.id) {
+          <tr>
+            <td class="game-id">{{ juego.id }}</td>
+            <td class="game-details">
+              <div class="game-details__content">
+                <img
+                  [src]="juego.imagen"
+                  [alt]="'Portada de ' + juego.nombre"
+                  loading="lazy"
+                  width="80"
+                  height="56"
+                />
+                <div>
+                  <h2>{{ juego.nombre }}</h2>
+                  <p>{{ juego.descripcion }}</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <span class="badge" [class]="'badge badge--' + juego.badge">{{ juego.genero }}</span>
+            </td>
+            <td>{{ juego.plataforma }}</td>
+            <td>{{ juego.anioLanzamiento }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
