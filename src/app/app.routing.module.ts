@@ -17,6 +17,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'lol',
+    loadChildren: () =>
+      import('./modules/module-lol/module-lol.module').then(
+        (module) => module.ModuleLolModule,
+      ),
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'juegos',
