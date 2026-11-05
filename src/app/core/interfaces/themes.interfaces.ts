@@ -11,10 +11,10 @@
  * utilizados en interfaces de usuario.
  *
  */
-export type Themes = 
+export type Themes =
     | 'primary'
-    | 'secondary' 
-    | 'success' 
+    | 'secondary'
+    | 'success'
     | 'danger'
     | 'warning'
     | 'info'

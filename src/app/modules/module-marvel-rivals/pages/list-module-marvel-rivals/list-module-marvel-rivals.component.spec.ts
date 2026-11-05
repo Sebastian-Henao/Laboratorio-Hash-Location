@@ -54,14 +54,14 @@ describe('ListModuleMarvelRivalsComponent', () => {
   it('debería manejar el error cuando falla getAllRivals', () => {
     component.moduleMarvelRivals = [];
     const errorResponse = new Error('Error al cargar personajes de Marvel Rivals');
-  
+
     jest.spyOn(console, 'error').mockImplementation(() => {});
     jest.spyOn(moduleMarvelRivalsService, 'getAllRivals').mockReturnValue(throwError(() => errorResponse));
-  
+
     fixture.detectChanges();
-  
+
     expect(moduleMarvelRivalsService.getAllRivals).toHaveBeenCalled();
     expect(console.error).toHaveBeenCalledWith(errorResponse);
     expect(component.moduleMarvelRivals.length).toBe(0);
-    });
+  });
 });

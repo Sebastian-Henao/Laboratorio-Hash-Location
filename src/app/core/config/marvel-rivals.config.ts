@@ -2,7 +2,7 @@ import { MarvelRivals } from "../../modules/module-marvel-rivals/interfaces/modu
 
 /**
  * Listado de personajes de Marvel Rivals disponibles en el sistema
- * 
+ *
  * Esta constante simula una fuente de datos (mock) que representa
  * información básica de personajes, utilizada para:
  * - Pruebas unitarias

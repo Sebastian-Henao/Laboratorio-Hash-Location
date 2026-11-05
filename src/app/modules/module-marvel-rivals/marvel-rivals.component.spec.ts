@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterModule } from '@angular/router';
 import { MarvelRivalsComponent } from './marvel-rivals.component';
 
 describe('MarvelRivalsComponent', () => {
@@ -8,9 +8,9 @@ describe('MarvelRivalsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MarvelRivalsComponent]
-    })
-    .compileComponents();
+      declarations: [MarvelRivalsComponent],
+      imports: [RouterModule.forRoot([])],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MarvelRivalsComponent);
     component = fixture.componentInstance;

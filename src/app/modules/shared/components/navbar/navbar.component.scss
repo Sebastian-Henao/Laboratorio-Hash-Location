@@ -6,40 +6,17 @@
 .navbar {
   box-sizing: border-box;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-end;
   max-width: 1384px;
   height: 61px;
   margin: 0 auto;
   border-bottom: 1px solid #dee2e6;
 }
 
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  color: #212529;
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.brand-mark {
-  display: inline-flex;
-  width: 30px;
-  height: 30px;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid currentColor;
-  border-radius: 8px;
-  font-size: 21px;
-  line-height: 1;
-}
-
 .navigation {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 2px;
 }
 
@@ -70,10 +47,6 @@
     flex-wrap: wrap;
     gap: 8px;
     padding: 0 16px 10px;
-  }
-
-  .brand {
-    font-size: 24px;
   }
 
   .navigation {
