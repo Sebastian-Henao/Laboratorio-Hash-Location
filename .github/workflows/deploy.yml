@@ -34,7 +34,7 @@ jobs:
         run: npm ci
 
       - name: Run unit tests
-        run: npm test -- --watch=false
+        run: npm test -- --runInBand --coverage=false
 
       - name: Build Angular
         run: npm run build -- --base-href /Laboratorio-Hash-Location/

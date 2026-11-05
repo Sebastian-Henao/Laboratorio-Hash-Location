@@ -1,15 +1,18 @@
-# Catálogo de videojuegos
+# Laboratorio Hash Location
 
-Aplicación Angular que muestra los videojuegos en una tabla responsive con imágenes, géneros, plataformas y años de lanzamiento. No requiere registro.
+Aplicación Angular organizada por módulos de funcionalidad. Incluye la tabla de videojuegos y el módulo de personajes de Marvel Rivals. No requiere registro.
 
 ## Enrutamiento
 
-La aplicación utiliza **Hash Location Strategy** mediante `provideRouter(routes, withHashLocation())`. El catálogo está en `/#/juegos`.
+La aplicación utiliza Hash Location Strategy (`useHash: true`) en el enrutador principal. Cada funcionalidad se carga desde su propio módulo:
+
+- `/#/juegos`: catálogo tabular de videojuegos.
+- `/#/marvel-rivals/list-marvel-rivals`: personajes de Marvel Rivals.
 
 ## Despliegue
 
 El workflow de GitHub Actions construye la aplicación y la publica en GitHub Pages al actualizar la rama `master`.
-El proyecto utiliza Angular 22, por lo que el pipeline se ejecuta con Node.js 24 (Angular 22 requiere Node.js 22.22.3 o superior).
+El proyecto utiliza Angular 20 y Node.js 24 en el pipeline.
 
 **Aplicación:** https://sebastian-henao.github.io/Laboratorio-Hash-Location/
 
